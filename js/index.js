@@ -15,6 +15,11 @@ images.forEach(element => {
     });
 })
 
+home.addEventListener('dblclick', event => {
+    home.style.backgroundColor = '#676767';
+})
+
+
 
 navLink.forEach(element => {
     element.addEventListener('mouseover', event => {
@@ -26,9 +31,7 @@ navLink.forEach(element => {
     })
 })
 
-home.addEventListener('dblclick', event => {
-    home.style.backgroundColor = '#6a6a6a';
-})
+
 
 titles.forEach(element => {
     element.addEventListener('click', event => {
@@ -46,4 +49,18 @@ paragraphs.forEach(element => {
         event.target.style.background = ''
         event.target.style.color = ''
     });
+})
+
+button.forEach(element => {
+    element.addEventListener('click', event => {
+        event.stopPropagation()
+        event.target.style.backgroundColor = '#e6e6fa';
+        event.target.style.color = '#1e90ff';
+    })
+
+
+})
+
+footer.addEventListener('mouseover', event => {
+    footer.style.backgroundColor = 'tan'
 })
