@@ -7,6 +7,20 @@ const paragraphs = document.querySelectorAll('p')
 const images = document.querySelectorAll('img')
 const footer = document.querySelector('.footer p')
 const button = document.querySelectorAll('.btn')
+const destination = document.querySelectorAll('.destination')
+const logo = document.querySelector('.logo-heading')
+const body = document.querySelector('body')
+const topBar = document.querySelector('.main-navigation')
+
+window.addEventListener('keydown', function (event) {
+    body.style.backgroundColor = '#DAFFEF'
+    body.style.color = '#17A2B8'
+    topBar.style.color = '#f20000'
+})
+
+logo.addEventListener('click', event => {
+    logo.style.fontSize = '6rem'
+})
 
 images.forEach(element => {
     element.addEventListener('wheel', event => {
@@ -16,7 +30,7 @@ images.forEach(element => {
 })
 
 home.addEventListener('dblclick', event => {
-    home.style.backgroundColor = '#676767';
+    home.style.backgroundColor = '#676767'
 })
 
 
@@ -49,6 +63,15 @@ paragraphs.forEach(element => {
         event.target.style.background = ''
         event.target.style.color = ''
     });
+})
+
+destination.forEach(element => {
+    element.addEventListener('mouseover', event => {
+        event.target.style.border = '2px solid #000'
+    })
+    element.addEventListener('mouseout', event => {
+        event.target.style.border = ''
+    })
 })
 
 button.forEach(element => {
