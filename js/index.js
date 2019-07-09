@@ -1,4 +1,9 @@
 // Your code goes here
+TweenMax.from(".img-content", 3, {
+    x: 300,
+    opacity: 0,
+    scale: 0.5
+});;
 
 const navLink = document.querySelectorAll('.nav-link')
 const home = document.querySelector('.home')
